@@ -15,7 +15,7 @@ class Triangle
     else
       :scalene
     end
-  end 
+  end
 
   def validate
   end
