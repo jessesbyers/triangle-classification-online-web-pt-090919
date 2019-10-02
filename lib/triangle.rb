@@ -18,31 +18,17 @@ class Triangle
     end
   end
 
-  # def validate
-  #   valid_triangle = [(side1+side2>side3), (side2+side3>side1), (side1+side3>side2)]
-  #
-  #   [side1, side2, side3].each do |side|
-  #     valid_triangle << false if side <= 0
-  #     raise TriangleError if valid_triangle.include? (false)
-  #   end
-  #   end
-
-    def validate
-      valid_triangle = [(side1+side2>side3), (side2+side3>side1), (side1+side3>side2)]
-      valid_triangle.each do |combo|
-        if !combo
-          valid_triangle << false
-          raise TriangleError if valid_triangle.include? (false)
-        end
-        end
+  def validate
+    valid_triangle = [(side1+side2>side3), (side2+side3>side1), (side1+side3>side2)]
+    valid_triangle.each do |combo|
+      if !combo
+        valid_triangle << false
+        raise TriangleError if valid_triangle.include? (false)
       end
-      # [side1, side2, side3].each do |side|
-      #   valid_triangle << false if side <= 0
-      #   raise TriangleError if valid_triangle.include? (false)
-
-
-    class TriangleError < StandardError
     end
+  end
+
+  class TriangleError < StandardError
+  end
 
 end
-#
