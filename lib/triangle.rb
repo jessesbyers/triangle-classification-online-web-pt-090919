@@ -33,12 +33,13 @@ class Triangle
         if !combo
           valid_triangle << false
           raise TriangleError if valid_triangle.include? (false)
-
+        end
+        end
+      end
       # [side1, side2, side3].each do |side|
       #   valid_triangle << false if side <= 0
       #   raise TriangleError if valid_triangle.include? (false)
-      end
-      end
+
 
     class TriangleError < StandardError
     end
