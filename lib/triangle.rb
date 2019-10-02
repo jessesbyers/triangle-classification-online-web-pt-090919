@@ -26,7 +26,9 @@ class Triangle
       valid_triangle << false if side <= 0
       raise TriangleError if valid_triangle.include? (false)
     end
+    end
 
-  end
+    class TriangleError < StandardError
+    end
 
 end
